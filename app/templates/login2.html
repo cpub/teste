@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% block meuconteudo %}
+<h2>LOGIN POR EXEMPLO COM POST</h2>
+<p>Meus dados<br/>
+     <form action="/autenticar2" method="post">
+        Usuário: <input type="text" name="usuario"><br/><br/>
+        Senha : <input type="text" name="senha"><br/><br/>
+        <button type="submit"> ENTRAR</button>
+     </form>
+{% endblock %}

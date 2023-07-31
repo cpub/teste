@@ -2,6 +2,7 @@
 {% block meuconteudo %}
 <h2>HELLO {{ nome }}!</h2>
 <p>Meus dados<br/>
+     <img class='imgquadrada' src="{{url_for('static', filename='imagens/imageteste.jpeg')}}"><br/>
      Profissão: {{dados.profissao}}<br/>
      Canal: {{dados.canal }}
 </p>

@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
 </head>
 <body>
   <nav>
-    <a href="/index">Página Inicial</a>
-    <a href="/contato">Contatos</a>
+    <a href="/login1">Login1 | </a>
+    <a href="/login2">Login2post | </a>
+    <a href="/index">Página Inicial | </a>
+    <a href="/contato">Contatos | </a>
+    <a href="/parametros/<NOMEDOPARAMETRO1>/<NOMEDOPARAMETRO2>/<NOMEDOPARAMETRO3>">Parametros</a>
   </nav>
 
   {% block meuconteudo %}
