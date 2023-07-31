@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block meuconteudo %}
+<h2>LOGIN POR EXEMPLO</h2>
+<p>Meus dados<br/>
+     <form action="/autenticar">
+        Usuário: <input type="text" name="usuario"><br/><br/>
+        Senha : <input type="text" name="senha"><br/><br/>
+        <button type="submit"> ENTRAR</button>
+     </form>
+{% endblock %}
