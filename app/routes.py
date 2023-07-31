@@ -1,6 +1,5 @@
 from app import app
-from flask import render_template
-from flask import request
+from flask import render_template, request, flash, redirect
 @app.route("/")
 @app.route("/index")
 def index():
@@ -31,7 +30,12 @@ def autenticar1():
         # REQUEST PARA PEGAR OS DADOS DO FORMULÁRIO
         usuario = request.args.get('usuario')
         senha = request.args.get('senha')
-        return "usuário {} e senha {}".format(usuario,senha)
+        if (usuario == "admin" and senha=="senha123"):
+            return "usuário {} e senha {}".format(usuario,senha)
+        else:
+            flash("DADOS INVÁLIDOS")
+            flash("LOGIN OU SENHA INVÁLIDOS")
+            return redirect('/login1')
 
 @app.route("/login2")
 def login2():
